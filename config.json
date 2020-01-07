@@ -1,0 +1,82 @@
+{
+    "name": "PAN",
+    "data_loader": {
+        "type": "ImageDataset",
+        "args": {
+            "dataset": {
+                "train_data_path": [
+                    [
+                        "/home/insight/datasets/icdar2015/train/train.txt"
+                    ]
+                ],
+                "train_data_ratio": [
+                    1.0
+                ],
+                "val_data_path": "/home/insight/datasets/icdar2015/test",
+                "input_size": 640,
+                "img_channel": 3,
+                "shrink_ratio": 0.5
+            },
+            "loader": {
+                "validation_split": 0,
+                "train_batch_size": 16,
+                "shuffle": true,
+                "pin_memory": true,
+                "drop_last": true,
+                "num_workers": 0
+            }
+        }
+    },
+    "arch": {
+        "type": "PANModel",
+        "args": {
+            "backbone": "resnet18",
+            "fpem_repeat": 2,
+            "pretrained": true,
+            "segmentation_head": "FPEM_FFM",
+            "norm_layer": "sync_bn",
+            "result_num": 6,
+            "fpem_repeat": 2
+
+        }
+    },
+    "loss": {
+        "type": "PANLoss",
+        "args": {
+            "alpha": 0.5,
+            "beta": 0.25,
+            "delta_agg": 0.5,
+            "delta_dis": 3,
+            "ohem_ratio": 3
+        }
+    },
+    "optimizer": {
+        "type": "Adam",
+        "args": {
+            "lr": 0.001,
+            "weight_decay": 0,
+            "amsgrad": true
+        }
+    },
+    "lr_scheduler": {
+        "type": "StepLR",
+        "args": {
+            "step_size": 200,
+            "gamma": 0.1
+        }
+    },
+    "trainer": {
+        "seed": 2,
+        "gpus": [
+            0
+        ],
+        "epochs": 600,
+        "display_interval": 10,
+        "show_images_interval": 50,
+        "resume_checkpoint": "",
+        "finetune_checkpoint": "",
+        "output_dir": "output",
+        "tensorboard": true,
+        "metrics": "hmean"
+    }
+}

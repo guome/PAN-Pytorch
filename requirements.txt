@@ -1,0 +1,9 @@
+torch>=1.1.0
+torchvision>=0.3.0
+scikit-image>=0.16.2
+opencv>=3.4.0
+tensorboard>=2.0.1
+pyclipper>=1.1.0
+Polygon3
+Shapely
+tqdm
