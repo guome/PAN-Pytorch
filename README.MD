@@ -63,20 +63,20 @@ The project is still under development.
 | Method                   | image size (short size) |learning rate | Precision (%) | Recall (%) | F-measure (%) | FPS | pretrained_model|
 |:--------------------------:|:-------:|:--------:|:--------:|:------------:|:---------------:|:-----:|:------:|
 | paper(resnet18)  | 736 |x | x | x | 80.4 | 26.1 | x |
-| my (resnet18+FPEM_FFM+pse扩张)  |736 |1e-3| 84.86 | 75.8 | 80.09 | x | (https://drive.google.com/open?id=11jiIfndchSdQpSC0PHjSxLljwo4UHXne) |
+| my (resnet18+FPEM_FFM+pse扩张)  |736 |1e-3| 84.86 | 75.8 | 80.09 | x | [pan_icdar2015](https://drive.google.com/open?id=11jiIfndchSdQpSC0PHjSxLljwo4UHXne) |
 
 ### CTW1500
 
 | Method                   | image size (short size) |learning rate | Precision (%) | Recall (%) | F-measure (%) | FPS | pretrained_model|
 |:--------------------------:|:-------:|:--------:|:--------:|:------------:|:---------------:|:-----:|:-----:|
 | paper(resnet18)  | 640 |x | 86.4 | 81.2 | 83.7 | 26.1 | x |
-| my (resnet18+FPEM_FFM+pse扩张)  |640 |1e-3| 86.7 | 77.4 | 81.8 | x | (https://drive.google.com/open?id=1w_CHSKmCGwJJndtlkrWAdhshuJm7RATN) |
+| my (resnet18+FPEM_FFM+pse扩张)  |640 |1e-3| 86.7 | 77.4 | 81.8 | x | [pan_ctw1500](https://drive.google.com/open?id=1w_CHSKmCGwJJndtlkrWAdhshuJm7RATN) |
 
 ### [icdar2019](https://rrc.cvc.uab.es/?ch=16)
 
 | Method                   | image size (short size) |learning rate | Precision (%) | Recall (%) | F-measure (%) | FPS | pretrained_model|
 |:--------------------------:|:-------:|:--------:|:--------:|:------------:|:---------------:|:-----:|:------:|
-| my (resnet18+FPEM_FFM+pse扩张)  |736 |1e-3| 81.6 | 62.3 | 70.7 | x | (https://drive.google.com/open?id=1SfGYGonWJJkjnQSNHok80GxP5SFSiSOh) |
+| my (resnet18+FPEM_FFM+pse扩张)  |736 |1e-3| 81.6 | 62.3 | 70.7 | x | [pan_icdar2019](https://drive.google.com/open?id=1SfGYGonWJJkjnQSNHok80GxP5SFSiSOh) |
 
 
 ### examples
